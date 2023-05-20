@@ -32,7 +32,7 @@ for i in range(len(ls_samples)):
 
     ### to aggregate data matrix by group, and save it as an output file
     df_merged_2=df_merged.groupby(['#ARG_NEW2'],as_index=False).sum() # to aggregate (sum) coverage values by group (i.e., #ARG_NEW2)
-    df_merged_2.to_csv(ls_samples[i] + '.clean.deeparg.mapping.ARG_v2.csv',sep=',',index=False) # to generate a intermediate dataframe (will be a feeder for the next workflow code)
+    df_merged_2[['#ARG_NEW2','coverage']].to_csv(ls_samples[i] + '.clean.deeparg.mapping.ARG_v2.csv',sep=',',index=False) # to generate a intermediate dataframe (will be a feeder for the next workflow code)
 
 
 
