@@ -1,5 +1,5 @@
 ### Title : A customized workflow for calculating coverage and 16S-normalized abundance from intermediate data produced by DeepARG-SL-Pipeline.v2
-## Written by Jangwoo Lee, PhD, Postdoctoral Fellow, University of Calgary, Calgary, AB, Canada
+## Written by Jangwoo Lee, PhD, Postdoctoral Fellow, University of Calgary, Calgary, AB, Canada (jangwoo.lee@ucalgary.ca)
 ## Related publication : Acosta, Lee et al., 2023, Metagenomic analysis after selective culture enrichment of wastewater demonstrates increased burden of antibiotic resistant genes in hospitals relative to the community, medRxiv (Doi: https://doi.org/10.1101/2023.03.07.23286790) - Submitted to Nature Communications
 
 ### Overview : This customized workflow is designed to extract ARGs at more granular level (e.g., OXA-1, 2, ...) from intermediate data produced by DeepARG-SL-Pipeline.v2 (Arango-Argoty et al., 2018; https://doi.org/10.1186/s40168-018-0401-z). The final products (*.clean.deeparg.mapping.ARG.merged.quant.subtype) of this pipeline suggest ARG-subtypes at more aggregated level (e.g., OXA), thus a self-written workflow is required to explore ARG data at more granular level. This workflow consists of a total of 5-steps (Workflow_1 to 5).  
