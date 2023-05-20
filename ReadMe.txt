@@ -7,7 +7,7 @@
 ### Input Files :
 #features.gene.length : A reference file where gene length for each ARG-subtype (gene_id) information is located. This could be found from the folder where DeepARG-DB is located (.../deeparg_db/database/v2/features.gene.length). Please refer to the pipeline developer's GitHub (https://hub.docker.com/r/gaarangoa/deeparg)
 #Nicole_Hospital_16S_mapped_reads_and_sample_list_v1.csv : A sample list where sample ID (Seq_ID) and their corresponding 16S rRNA gene read number (#16S_reads) information is located. This should be manually created. For '#16S_reads', please refer to the final log files after running DeepARG-SL-Pipeline.
-#*.clean.deeparg.mapping.ARG : An intermediate file from DeepARG-SL-Pipeline. This will be an input file for the first step of our workflow (1. Workflow_1_coverage_per_subtype.py).
+#*.clean.deeparg.mapping.ARG : The intermediate files from DeepARG-SL-Pipeline. These will be input files for the first step of our workflow (1. Workflow_1_coverage_per_subtype.py).
 
 ### Python scripts for 5-step workflows : 
 #1. Workflow_1_coverage_per_subtype.py : 'Coverage' for each ARG-subtype was calculated
