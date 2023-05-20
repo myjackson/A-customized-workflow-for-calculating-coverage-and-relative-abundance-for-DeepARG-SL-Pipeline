@@ -34,7 +34,7 @@ for i in range(len(ls_samples)):
     df_merged=pd.concat([df,df_new,df_new_2],axis=1) # to merge those two dataframes into the mother data
     # df_merged.to_csv(ls_samples[i] + '.clean.deeparg.mapping.ARG_intermediate.csv',sep=',',index=False) # to generate an intermediate file (if you want to double-check!)
 
-    ### 
+    ### to aggregate data matrix by group, and save it as an output file
     df_merged_2=df_merged.groupby(['#ARG_NEW2'],as_index=False).sum() # to aggregate (sum) coverage values by group (i.e., #ARG_NEW2)
     df_merged_2.to_csv(ls_samples[i] + '.clean.deeparg.mapping.ARG_v2.csv',sep=',',index=False) # to generate a intermediate dataframe (will be a feeder for the next workflow code)
 
