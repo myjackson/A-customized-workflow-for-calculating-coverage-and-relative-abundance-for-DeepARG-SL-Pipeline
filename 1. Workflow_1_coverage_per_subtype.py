@@ -9,10 +9,10 @@ df_ref=pd.read_csv('features.gene.length',sep='\t',skip_blank_lines=True,index_c
 df_sample_list=pd.read_csv('Nicole_Hospital_16S_mapped_reads_and_sample_list_v1.csv',sep=',',skip_blank_lines=True,index_col=False) # to read the data for sample list (Seq_ID) & the corresponding the number of 16S reads (#16S_reads)
 ls_samples=df_sample_list['Seq_ID'].tolist() # to assign a sample list to 'ls_samples'
 
-ls_2=[] # an empty list where a calculated coverage ('coverage) for each gene (each row for #ARG_NEW2 column) will be saved
-
 ### a look-up table for updating 'ref_length' & 'coverage'
 for i in range(len(ls_samples)):
+    ls_2=[] # an empty list where a calculated coverage ('coverage) for each gene (each row for #ARG_NEW2 column) will be saved
+
     df=pd.read_csv(ls_samples[i] + '.clean.deeparg.mapping.ARG',sep='\t',skip_blank_lines=True,index_col=False)
     df['#ARG_NEW']=df["best-hit"].str.split('|').str[2]
     df['#ARG_NEW2']=df['#ARG_NEW']+'|'+df['predicted_ARG-class']
